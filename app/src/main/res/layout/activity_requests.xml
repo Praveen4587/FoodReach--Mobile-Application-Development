@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgbg"
+    android:padding="16dp"
+    tools:context=".RequestsActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvRequestTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Available Food Donations"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Request Source Label -->
+
+    <!-- Request Source Selection -->
+
+    <TextView
+        android:id="@+id/tvSourceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="Request Source"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRequestTitle" />
+
+    <RadioGroup
+        android:id="@+id/rgRequestSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvSourceLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </RadioGroup>
+
+    <!-- Food Preference -->
+
+    <!-- Urgency Level -->
+
+    <!-- Delivery or Pickup Option -->
+
+    <TextView
+        android:id="@+id/tvFoodPreferenceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Food Preference"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbCharities" />
+
+    <RadioGroup
+        android:id="@+id/rgFoodPreference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUrgencyLevelLabel">
+
+        <RadioButton
+            android:id="@+id/rbCookedMeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cooked Meals"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbBakedGoods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baked Goods"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbVegetarianVegan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vegetarian/Vegan"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbDairyFreeGlutenFree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dairy-Free, Gluten-Free"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvUrgencyLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Urgency Level"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvFoodPreferenceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/rbCharities" />
+
+    <RadioGroup
+        android:id="@+id/rgUrgencyLevel"
+        android:layout_width="188dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rgFoodPreference">
+
+        <RadioButton
+            android:id="@+id/rbUrgent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Urgent (Within 1 Hour)"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbFlexible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flexible (Within a Few Days)"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgDeliveryOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="472dp">
+
+    </RadioGroup>
+
+    <!-- Verification (For Charities & Food Banks) -->
+    <LinearLayout
+        android:id="@+id/llVerification"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/rgDeliveryOption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <CheckBox
+            android:id="@+id/cbRegisteredOrganization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registered Organization"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/etRegistrationNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Registration Number"
+            android:padding="10dp"
+            android:textColor="@color/material_dynamic_neutral90"
+            android:textColorHint="@color/material_dynamic_neutral80" />
+    </LinearLayout>
+
+    <!-- Additional Comments -->
+
+    <!-- Request Food Button -->
+
+    <!-- Back to Home Button -->
+
+    <EditText
+        android:id="@+id/etAdditionalComments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Additional Comments"
+        android:padding="10dp"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textColorHint="@color/material_dynamic_neutral80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgUrgencyLevel" />
+
+    <Button
+        android:id="@+id/btnRequestFood"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/material_dynamic_neutral50"
+        android:padding="10dp"
+        android:text="Request Food"
+        android:textColor="@color/material_dynamic_neutral0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbWillPickUp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:text="Back to Home"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRequestFood"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <RadioButton
+        android:id="@+id/rbWillPickUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Will Pick Up"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rbDeliveryNeeded"
+        app:layout_constraintTop_toBottomOf="@+id/etAdditionalComments" />
+
+    <RadioButton
+        android:id="@+id/rbDeliveryNeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:text="Delivery Needed"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAdditionalComments" />
+
+    <RadioButton
+        android:id="@+id/rbFoodBank"
+        android:layout_width="113dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:text="Food Bank"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSourceLabel" />
+
+    <RadioButton
+        android:id="@+id/rbCharities"
+        android:layout_width="102dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:text="Charities"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/rbFoodBank"
+        app:layout_constraintTop_toTopOf="@+id/rbIndividual" />
+
+    <RadioButton
+        android:id="@+id/rbIndividual"
+        android:layout_width="107dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:text="Individual"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/rbCharities"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSourceLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

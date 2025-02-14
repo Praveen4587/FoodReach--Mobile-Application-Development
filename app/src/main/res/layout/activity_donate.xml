@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgbg"
+    android:padding="16dp"
+    tools:context=".DonateActivity">
+
+    <!-- Title -->
+
+    <TextView
+        android:id="@+id/tvDonateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Donate Food"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Food Category -->
+    <TextView
+        android:id="@+id/tvFoodCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Category"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDonateTitle" />
+
+    <RadioGroup
+        android:id="@+id/rgFoodCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFoodCategoryLabel">
+
+        <RadioButton
+            android:id="@+id/rbCookedMeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cooked Meals"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbBakeryItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bakery Items"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbFreshProduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fresh Produce"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbDairyProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dairy Products"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbCannedDryGoods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canned and Dry Goods"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbBeverages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beverages"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <!-- Expiration Date -->
+    <EditText
+        android:id="@+id/etExpirationDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Expiration Date"
+        android:padding="10dp"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textColorHint="@color/material_dynamic_neutral80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgFoodCategory" />
+
+    <!-- Preferred Pickup Time -->
+    <EditText
+        android:id="@+id/etPickupTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Preferred Pickup Time"
+        android:padding="10dp"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textColorHint="@color/material_dynamic_neutral80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etExpirationDate" />
+
+    <!-- Donor Type -->
+    <TextView
+        android:id="@+id/tvDonorTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Donor Type"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPickupTime" />
+
+    <RadioGroup
+        android:id="@+id/rgDonorType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDonorTypeLabel">
+
+        <RadioButton
+            android:id="@+id/rbRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbSupermarket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Supermarket"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbHousehold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Household"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <!-- Additional Notes (Optional) -->
+    <EditText
+        android:id="@+id/etAdditionalNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Additional Notes (Optional)"
+        android:padding="10dp"
+        android:textColor="@color/material_dynamic_neutral90"
+        android:textColorHint="@color/material_dynamic_neutral80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgDonorType" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSubmitDonation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="@color/material_dynamic_neutral50"
+        android:padding="10dp"
+        android:text="Donate Now"
+        android:textColor="@color/material_dynamic_neutral0"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAdditionalNotes" />
+
+    <!-- Back to Home Button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:text="Back to Home"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnSubmitDonation"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

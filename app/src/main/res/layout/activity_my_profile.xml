@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgbg"
+    tools:context=".MyProfileActivity">
+
+    <!-- Username -->
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Username"
+        android:textColor="@color/ic_launcher_background"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <!-- Email -->
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="348dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Username"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUsername" />
+
+    <!-- Contact -->
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="Email"
+        android:textColor="@color/ic_launcher_background"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextUsername" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="323dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Email"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+
+    <TextView
+        android:id="@+id/textViewContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="Contact"
+        android:textColor="@color/ic_launcher_background"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+    <!-- District -->
+
+    <EditText
+        android:id="@+id/editTextContact"
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Contact"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewContact" />
+
+    <TextView
+        android:id="@+id/textViewDistrict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:text="District"
+        android:textColor="@color/ic_launcher_background"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextContact" />
+
+    <!-- Password -->
+
+    <EditText
+        android:id="@+id/editTextDistrict"
+        android:layout_width="329dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter District"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDistrict" />
+
+    <!-- Save Button -->
+
+    <!-- Delete Button -->
+
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:text="Password"
+        android:textColor="@color/ic_launcher_background"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDistrict" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="335dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Password"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPassword" />
+
+    <Button
+        android:id="@+id/buttonSaveProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Save Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+        app:layout_constraintVertical_bias="0.213" />
+
+    <Button
+        android:id="@+id/buttonDeleteProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Delete Profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonSaveProfile" />
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Back to home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDeleteProfile" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="80dp"
+        android:text="My Profile"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
